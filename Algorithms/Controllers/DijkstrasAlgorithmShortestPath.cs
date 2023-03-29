@@ -16,6 +16,11 @@ namespace Algorithms.Controllers
                 var result = AlgorithmV1.Run(vm); // mostra a distancia do vertice inicial ao vertice final;
                 return Ok(result);
             }
+            if (vm.Method == 2)
+            {
+                var result = AlgorithmV2.Run(vm); // mostra o caminho do grafo, partindo do vertice inicial ao vertice final;
+                return Ok(result);
+            }
 
             return BadRequest();
         }
