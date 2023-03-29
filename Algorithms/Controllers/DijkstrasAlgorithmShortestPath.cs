@@ -21,6 +21,11 @@ namespace Algorithms.Controllers
                 var result = AlgorithmV2.Run(vm); // mostra o caminho do grafo, partindo do vertice inicial ao vertice final;
                 return Ok(result);
             }
+            if (vm.Method == 3)
+            {
+                var result = AlgorithmV3.Run(vm); // mostra a soma e o caminho do vertice final e inicial 
+                return Ok(result);
+            }
 
             return BadRequest();
         }
